@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   .then(response => response.json())
   .then(data => {
     console.log(data.custs)
-    for (i in data.custs) {
-      mylist.push(i)
+    for (i in data) {
+      mylist.push(i.custs)
+      console.log(i)
     }
   })
 })
