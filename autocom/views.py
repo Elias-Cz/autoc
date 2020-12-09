@@ -17,9 +17,10 @@ def my_resp(request):
     print(custs)
     for c in custs:
         first = c.first_name
+        last = c.last_name
+        mylist.append(last + ', ' + first)
 
-        mylist.append(first)
-
+    print(mylist)
     return JsonResponse({
     "custs": mylist
     })
